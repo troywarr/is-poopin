@@ -6,10 +6,9 @@ var Log = Parse.Object.extend('Log'),
 query.descending('createdAt');
 query.first({
   success: function(results) {
-    // console.log(results);
-    // console.log(results.get('status'));
     var start = results.get('status'),
         $body = $('body');
+
     if (start) { // yep
       $body.addClass('yep');
     } else { // nope
